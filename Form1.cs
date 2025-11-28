@@ -9,6 +9,8 @@ namespace Simple_calculator
         public string op = string.Empty;
         public string res = string.Empty;
 
+        int click = 0;
+
         public CALCULATOR()
         {
             InitializeComponent();
@@ -174,6 +176,25 @@ namespace Simple_calculator
 
                 panel.Visible = false;
                 screen.Text = res;
+            }
+        }
+
+        private void sideBar1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hamburgerMenu_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            if (click % 2 == 0)
+            {
+                sideBar1.Visible = true;
+                click = 1;
+            }
+            else
+            {
+                sideBar1.Visible = false;
+                click = 0;
             }
         }
     }      

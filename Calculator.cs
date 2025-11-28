@@ -49,7 +49,6 @@ namespace Simple_calculator
                     res = Math.Pow(left, right).ToString();
                     break;
             }
-
             return res;
         }
     }
