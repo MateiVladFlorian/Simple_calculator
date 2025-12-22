@@ -331,6 +331,7 @@ namespace Simple_calculator
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char key = e.KeyChar;
+            if (e.Handled) return;
 
             if (char.IsDigit(key))
             {
